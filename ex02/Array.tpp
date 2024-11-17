@@ -6,7 +6,7 @@
 /*   By: dolifero <dolifero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 23:27:49 by dolifero          #+#    #+#             */
-/*   Updated: 2024/11/17 23:56:17 by dolifero         ###   ########.fr       */
+/*   Updated: 2024/11/18 00:07:12 by dolifero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ template <typename T>
 Array<T>::Array(unsigned int n) : _arr(new T[n]), _size(n)
 {
 	std::cout << "Constructor with size called" << std::endl;
+	for (unsigned int i = 0; i < n; ++i)
+		_arr[i] = T();
 }
 
 template <typename T>
